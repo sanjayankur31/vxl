@@ -1,7 +1,8 @@
 # boxm2's Process Library
 
 # bprb depends on expat and boxm2_pro depends on bprb primarily
-include( ${BRL_MODULE_PATH}/FindEXPAT.cmake )
+FIND_PACKAGE(EXPAT REQUIRED)
+FIND_PACKAGE(EXPATPP REQUIRED)
 if(EXPAT_FOUND)
   include_directories( ${BRL_INCLUDE_DIR}/bpro/core )
   include_directories( ${BRL_INCLUDE_DIR}/bpro )

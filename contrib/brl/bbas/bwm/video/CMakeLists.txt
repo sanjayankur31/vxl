@@ -11,7 +11,8 @@ set(bwm_video_sources
                                  bwm_video_site_io_defs.h
 )
 
-include( ${BRL_MODULE_PATH}/FindEXPAT.cmake )
+FIND_PACKAGE(EXPAT REQUIRED)
+FIND_PACKAGE(EXPATPP REQUIRED)
 
 if(EXPAT_FOUND)
  if(EXPATPP_FOUND)

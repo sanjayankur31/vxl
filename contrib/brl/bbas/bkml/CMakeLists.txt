@@ -5,7 +5,7 @@ set(bkml_sources
   bkml_write.h bkml_write.cxx
 )
 
-include( ${BRL_MODULE_PATH}/FindEXPAT.cmake )
+FIND_PACKAGE(EXPAT REQUIRED)
 
 if(EXPAT_FOUND)
  if(EXPATPP_FOUND)

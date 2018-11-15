@@ -1,7 +1,8 @@
 # brl/bpro/CMakeLists.txt
 # main package for processing operations
 
-include( ${BRL_MODULE_PATH}/FindEXPAT.cmake )
+FIND_PACKAGE(EXPAT REQUIRED)
+FIND_PACKAGE(EXPATPP REQUIRED)
 if(EXPAT_FOUND)
 
 # Basic process classes

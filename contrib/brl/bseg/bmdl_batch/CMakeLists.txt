@@ -1,7 +1,8 @@
 # contrib/brl/bseg/bmdl_batch/CMakeLists.txt
 
 if( PYTHONLIBS_FOUND )
-  include( ${BRL_MODULE_PATH}/FindEXPAT.cmake )
+  FIND_PACKAGE(EXPAT REQUIRED)
+  FIND_PACKAGE(EXPATPP REQUIRED)
   if( EXPAT_FOUND )
    if(EXPATPP_FOUND)
     include(${VXL_CMAKE_DIR}/FindTIFF.cmake)

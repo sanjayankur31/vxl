@@ -1,7 +1,8 @@
 project(expat C)
 #include_regular_expression("^.*$")
 
-include( ${BRL_MODULE_PATH}/FindEXPAT.cmake )
+FIND_PACKAGE(EXPAT REQUIRED)
+FIND_PACKAGE(EXPATPP REQUIRED)
 if(NOT VXL_USING_NATIVE_EXPAT)
 
   if(WIN32)

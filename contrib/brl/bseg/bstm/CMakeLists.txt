@@ -15,7 +15,8 @@ set(bstm_sources bstm_block_metadata.h bstm_block_metadata.cxx
                  bstm_time_block.h bstm_time_block.cxx
                  bstm_util.cxx bstm_util.h)
 
-include( ${BRL_MODULE_PATH}/FindEXPAT.cmake )
+FIND_PACKAGE(EXPAT REQUIRED)
+FIND_PACKAGE(EXPATPP REQUIRED)
 if(EXPAT_FOUND)
   include_directories( ${EXPAT_INCLUDE_DIR} )
   include_directories( ${BRL_INCLUDE_DIR}/b3p/expatpp )

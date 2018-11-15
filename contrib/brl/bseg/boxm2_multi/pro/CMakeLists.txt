@@ -1,7 +1,8 @@
 # boxm2 multi gpu or cpu Process Library
 
 # bprb depends on expat and boxm2_multi_pro depends on bprb primarily
-include( ${BRL_MODULE_PATH}/FindEXPAT.cmake )
+FIND_PACKAGE(EXPAT REQUIRED)
+FIND_PACKAGE(EXPATPP REQUIRED)
 if(EXPAT_FOUND)
   include_directories( ${BRL_INCLUDE_DIR}/bseg )
   set(boxm2_multi_pro_sources

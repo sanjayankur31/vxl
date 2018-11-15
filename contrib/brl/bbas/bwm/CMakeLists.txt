@@ -26,7 +26,8 @@ endif()
 
 include( ${BRL_MODULE_PATH}/FindSHAPELIB.cmake )
 
-include( ${BRL_MODULE_PATH}/FindEXPAT.cmake )
+FIND_PACKAGE(EXPAT REQUIRED)
+FIND_PACKAGE(EXPATPP REQUIRED)
 
 # Set CMake options for using vgui
 include( ${VXL_CMAKE_DIR}/UseVGUI.cmake )
