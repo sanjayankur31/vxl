@@ -1,6 +1,8 @@
+FIND_PACKAGE(rply REQUIRED)
+
 include_directories( ${BRL_INCLUDE_DIR}/bseg )
 include_directories( ${MUL_INCLUDE_DIR} )
-include_directories( ${VTHREEP_INCLUDE_DIR}/rply)
+include_directories( ${RPLY_INCLUDE_DIR} )
 
 set(boxm2_cpp_algo_sources
     boxm2_cast_ray_function.h
@@ -57,7 +59,7 @@ set(boxm2_cpp_algo_sources
 aux_source_directory(Templates boxm2_cpp_algo_sources)
 
 vxl_add_library(LIBRARY_NAME boxm2_cpp_algo LIBRARY_SOURCES  ${boxm2_cpp_algo_sources})
-target_link_libraries(boxm2_cpp_algo boxm2_cpp brad boct brdb expatpp ${VXL_LIB_PREFIX}vpgl bvgl imesh imesh_algo bsta_algo bsta ${VXL_LIB_PREFIX}vil_algo ${VXL_LIB_PREFIX}vil ${VXL_LIB_PREFIX}vgl_xio ${VXL_LIB_PREFIX}vgl ${VXL_LIB_PREFIX}vnl_algo ${VXL_LIB_PREFIX}vnl ${VXL_LIB_PREFIX}vul ${VXL_LIB_PREFIX}vbl_io ${VXL_LIB_PREFIX}vbl ${VXL_LIB_PREFIX}vsl ${VXL_LIB_PREFIX}vcl bvpl rply)
+target_link_libraries(boxm2_cpp_algo boxm2_cpp brad boct brdb expatpp ${VXL_LIB_PREFIX}vpgl bvgl imesh imesh_algo bsta_algo bsta ${VXL_LIB_PREFIX}vil_algo ${VXL_LIB_PREFIX}vil ${VXL_LIB_PREFIX}vgl_xio ${VXL_LIB_PREFIX}vgl ${VXL_LIB_PREFIX}vnl_algo ${VXL_LIB_PREFIX}vnl ${VXL_LIB_PREFIX}vul ${VXL_LIB_PREFIX}vbl_io ${VXL_LIB_PREFIX}vbl ${VXL_LIB_PREFIX}vsl ${VXL_LIB_PREFIX}vcl bvpl ${RPLY_LIBRARY} )
 
 if(BUILD_TESTING)
   add_subdirectory(tests)
