@@ -1,6 +1,7 @@
 # brl/bseg/boxm/algo/CMakeLists.txt
+FIND_PACKAGE(rply REQUIRED)
 include_directories( ${MUL_INCLUDE_DIR} )
-include_directories( ${VTHREEP_INCLUDE_DIR}/rply )
+include_directories( ${RPLY_INCLUDE_DIR} )
 set(boxm_algo_sources
     boxm_compute_scene_statistics.h
     boxm_crop_scene.h
