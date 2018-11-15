@@ -7,7 +7,8 @@ set(bwm_io_sources
 )
 aux_source_directory(Templates bwm_io_sources)
 
-include( ${BRL_MODULE_PATH}/FindEXPAT.cmake )
+FIND_PACKAGE(EXPAT REQUIRED)
+FIND_PACKAGE(EXPATPP REQUIRED)
 
 if(EXPAT_FOUND)
  if(EXPATPP_FOUND)

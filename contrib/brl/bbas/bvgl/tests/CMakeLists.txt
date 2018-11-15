@@ -16,7 +16,8 @@ set(bvgl_test_sources
 )
 
 #Make sure expat library is found
-include( ${BRL_MODULE_PATH}/FindEXPAT.cmake )
+FIND_PACKAGE(EXPAT REQUIRED)
+FIND_PACKAGE(EXPATPP REQUIRED)
 
 if(EXPAT_FOUND)
   set(bvgl_test_sources ${bvgl_test_sources} test_bvgl_labelme_parser.cxx)

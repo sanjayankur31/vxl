@@ -1,5 +1,6 @@
 # contrib/brl/bseg/boxm/CMakeLists.txt
-include( ${BRL_MODULE_PATH}/FindEXPAT.cmake )
+FIND_PACKAGE(EXPAT REQUIRED)
+FIND_PACKAGE(EXPATPP REQUIRED)
 if(EXPAT_FOUND)
 
 include_directories( ${EXPAT_INCLUDE_DIR} )

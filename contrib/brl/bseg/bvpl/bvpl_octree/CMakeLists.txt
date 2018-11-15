@@ -1,7 +1,8 @@
 # This is contrib/brl/bseg/bvpl/bvpl_octree/CMakeLists.txt
 # Brown Voxel Processing library for octrees
 
-include( ${BRL_MODULE_PATH}/FindEXPAT.cmake )
+FIND_PACKAGE(EXPAT REQUIRED)
+FIND_PACKAGE(EXPATPP REQUIRED)
 
 #option( VXL_FORCE_V3P_RPLY "Use v3p ply library" YES)
 #mark_as_advanced( VXL_FORCE_V3P_RPLY )

@@ -20,7 +20,7 @@
 #include <map>
 #include <vector>
 #include <utility>
-#include <expatpplib.h>
+#include <expatpp.h>
 #ifdef _MSC_VER
 #  include <vcl_msvc_warnings.h>
 #endif

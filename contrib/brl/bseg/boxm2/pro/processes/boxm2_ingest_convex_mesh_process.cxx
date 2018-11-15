@@ -32,7 +32,7 @@
 #include <bmsh3d/algo/bmsh3d_fileio.h>
 #include <bmsh3d/bmsh3d_mesh_mc.h>
 #include <vgl/vgl_intersection.h>
-#include <expatpplib.h>
+#include <expatpp.h>
 #include <boxm2/boxm2_bounding_box_parser.h>
 
 namespace boxm2_ingest_convex_mesh_process_globals

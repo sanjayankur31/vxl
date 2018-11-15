@@ -1,6 +1,7 @@
 # This is contrib/brl/bseg/boxm2/volm/CMakeLists
 # volm depends on bkml and expat
-include( ${BRL_MODULE_PATH}/FindEXPAT.cmake )
+FIND_PACKAGE(EXPAT REQUIRED)
+FIND_PACKAGE(EXPATPP REQUIRED)
 if(EXPAT_FOUND)
   if(EXPATPP_FOUND)
     #depends on OPENCL being found...

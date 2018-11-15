@@ -1,7 +1,8 @@
 # contrib/brl/bseg/bbgm_batch/CMakeLists.txt
 include( ${VXL_CMAKE_DIR}/NewCMake/FindPython.cmake )
 if( PYTHON_FOUND )
-  include( ${BRL_MODULE_PATH}/FindEXPAT.cmake )
+  FIND_PACKAGE(EXPAT REQUIRED)
+FIND_PACKAGE(EXPATPP REQUIRED)
   if( EXPAT_FOUND )
     if(EXPATPP_FOUND)
     include(${VXL_CMAKE_DIR}/FindTIFF.cmake)

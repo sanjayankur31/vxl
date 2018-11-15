@@ -8,7 +8,8 @@ if(OPENCL_FOUND)
   include_directories( ${MUL_INCLUDE_DIR} )
 
   #find expatpp library
-  include( ${BRL_MODULE_PATH}/FindEXPAT.cmake )
+  FIND_PACKAGE(EXPAT REQUIRED)
+FIND_PACKAGE(EXPATPP REQUIRED)
   if(EXPAT_FOUND)
     include_directories( ${EXPAT_INCLUDE_DIR} )
     include_directories( ${BRL_INCLUDE_DIR}/b3p/expatpp )

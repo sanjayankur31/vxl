@@ -12,7 +12,8 @@ set( bxml_sources
     bxml_find.cxx                bxml_find.h
 )
 
-include( ${BRL_MODULE_PATH}/FindEXPAT.cmake )
+FIND_PACKAGE(EXPAT REQUIRED)
+FIND_PACKAGE(EXPATPP REQUIRED)
 
 if(EXPAT_FOUND)
  if(EXPATPP_FOUND)
@@ -28,12 +29,14 @@ aux_source_directory(Templates bxml_sources)
 
 vxl_add_library(LIBRARY_NAME bxml LIBRARY_SOURCES ${bxml_sources})
 
-target_link_libraries( bxml ${VXL_LIB_PREFIX}vbl_io ${VXL_LIB_PREFIX}vul ${VXL_LIB_PREFIX}vbl )
 if(EXPAT_FOUND)
  if(EXPATPP_FOUND)
-  target_link_libraries( bxml ${EXPATPP_LIBRARIES})
+  target_link_libraries( bxml ${EXPATPP_LIBRARIES} ${VXL_LIB_PREFIX}vbl_io ${VXL_LIB_PREFIX}vul ${VXL_LIB_PREFIX}vbl )
  endif()
+else()
+  target_link_libraries( bxml ${VXL_LIB_PREFIX}vbl_io ${VXL_LIB_PREFIX}vul ${VXL_LIB_PREFIX}vbl )
 endif()
+
 
 add_subdirectory(bsvg)
 

@@ -9,7 +9,8 @@ set(bwm_pro_sources
     bwm_register.h    bwm_register.cxx
 )
 
-include( ${BRL_MODULE_PATH}/FindEXPAT.cmake )
+FIND_PACKAGE(EXPAT REQUIRED)
+FIND_PACKAGE(EXPATPP REQUIRED)
 
 if(EXPAT_FOUND)
  if(EXPATPP_FOUND)

@@ -9,7 +9,8 @@ if(ZLIB_FOUND)
 endif()
 
 # bprb depends on expat and bmdl_prodepends on bprb primarily
-include( ${BRL_MODULE_PATH}/FindEXPAT.cmake )
+FIND_PACKAGE(EXPAT REQUIRED)
+FIND_PACKAGE(EXPATPP REQUIRED)
 if(EXPAT_FOUND)
   include(${VXL_CMAKE_DIR}/FindTIFF.cmake)
   if(TIFF_FOUND)

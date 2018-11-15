@@ -1,7 +1,8 @@
 # This is contrib/bwm/exe/CMakeLists.txt
 # World Modeling GUI executables
 
-include( ${BRL_MODULE_PATH}/FindEXPAT.cmake )
+FIND_PACKAGE(EXPAT REQUIRED)
+FIND_PACKAGE(EXPATPP REQUIRED)
 
 if(EXPAT_FOUND)
   if(EXPATPP_FOUND)

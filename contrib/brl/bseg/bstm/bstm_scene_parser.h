@@ -4,7 +4,7 @@
 #include <string>
 #include <iostream>
 #include <map>
-#include <expatpplib.h>
+#include <expatpp.h>
 
 #include <bstm/basic/bstm_block_id.h>
 #include <bstm/bstm_block_metadata.h>

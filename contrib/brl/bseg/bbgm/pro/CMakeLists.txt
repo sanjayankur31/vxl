@@ -1,6 +1,7 @@
 # brl/bseg/bbgm/pro/CMakeLists.txt
 
-include( ${BRL_MODULE_PATH}/FindEXPAT.cmake )
+FIND_PACKAGE(EXPAT REQUIRED)
+FIND_PACKAGE(EXPATPP REQUIRED)
 if(EXPAT_FOUND)
 
 include_directories( ${BRL_INCLUDE_DIR} )

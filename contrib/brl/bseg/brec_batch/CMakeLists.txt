@@ -1,7 +1,8 @@
 # contrib/brl/bseg/brec_batch/CMakeLists.txt
 include( ${VXL_CMAKE_DIR}/NewCMake/FindPython.cmake )
 if( PYTHON_FOUND )
-  include( ${BRL_MODULE_PATH}/FindEXPAT.cmake )
+  FIND_PACKAGE(EXPAT REQUIRED)
+FIND_PACKAGE(EXPATPP REQUIRED)
   if( EXPAT_FOUND )
     include_directories( ${PYTHON_INCLUDE_DIRS} )
     include_directories( ${BRL_INCLUDE_DIR} )
