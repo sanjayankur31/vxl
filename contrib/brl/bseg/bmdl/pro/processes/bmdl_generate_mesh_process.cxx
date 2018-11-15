@@ -37,7 +37,8 @@
 #include <vul/vul_file.h>
 
 #if HAS_ZLIB
-#include <minizip/zip.h>
+#include <zip.h>
+#include <zlib.h>
 #endif
 
 #define WRITEBUFFERSIZE (16384)
