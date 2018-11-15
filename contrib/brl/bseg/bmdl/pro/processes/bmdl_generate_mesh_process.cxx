@@ -38,6 +38,7 @@
 
 #if HAS_ZLIB
 #include <minizip/zip.h>
+#include <zlib.h>
 #endif
 
 #define WRITEBUFFERSIZE (16384)
