@@ -120,7 +120,8 @@ include(${CMAKE_CURRENT_LIST_DIR}/config/cmake/doxygen/doxygen.cmake)
 
 # Location of VXL's FindXXX.cmake CMake modules.
 # This is identical to VXL_CMAKE_DIR.  Perhaps we should eliminate MODULE_PATH?
-set( MODULE_PATH ${CMAKE_CURRENT_LIST_DIR}/config/cmake/Modules CACHE STATIC "VXL module path" )
+set( MODULE_PATH "${CMAKE_SOURCE_DIR}/config/cmake/Modules" CACHE PATH "VXL module path" )
+set( CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} "${CMAKE_SOURCE_DIR}/config/cmake/fedora-modules")
 
 # Options to add extra compiler and linker flags
 #

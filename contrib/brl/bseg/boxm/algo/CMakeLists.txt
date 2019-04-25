@@ -1,5 +1,5 @@
 # brl/bseg/boxm/algo/CMakeLists.txt
-FIND_PACKAGE(rply REQUIRED)
+FIND_PACKAGE(RPLY REQUIRED)
 include_directories( ${MUL_INCLUDE_DIR} )
 include_directories( ${RPLY_INCLUDE_DIR} )
 set(boxm_algo_sources

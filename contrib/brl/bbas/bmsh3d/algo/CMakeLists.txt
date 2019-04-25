@@ -1,6 +1,6 @@
 # This is bbas/bmsh3d/algo/CMakeLists.txt
 # Brown 3D Mesh Algorithm Library
-FIND_PACKAGE(rply REQUIRED)
+FIND_PACKAGE(RPLY REQUIRED)
 
 include_directories( ${BRL_INCLUDE_DIR} )
 include_directories( ${RPLY_INCLUDE_DIR} )
