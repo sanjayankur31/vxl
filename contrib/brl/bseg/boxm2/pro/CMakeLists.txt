@@ -11,7 +11,14 @@ if(EXPAT_FOUND)
   include_directories( ${BRL_INCLUDE_DIR}/bbas )
   include_directories( ${GEL_INCLUDE_DIR}/mrc/vpgl )
   include_directories( ${GEL_INCLUDE_DIR}/mrc )
+
+FIND_PACKAGE(RPLY REQUIRED)
+if(RPLY_FOUND)
+  include_directories( ${RPLY_INCLUDE_DIR} )
+else()
   include_directories( ${VTHREEP_INCLUDE_DIR}/rply )
+endif()
+
 
   set(boxm2_pro_sources
       boxm2_processes.h
