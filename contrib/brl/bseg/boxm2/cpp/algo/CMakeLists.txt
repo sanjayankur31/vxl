@@ -1,4 +1,4 @@
-FIND_PACKAGE(rply REQUIRED)
+FIND_PACKAGE(RPLY REQUIRED)
 
 include_directories( ${BRL_INCLUDE_DIR}/bseg )
 include_directories( ${MUL_INCLUDE_DIR} )
