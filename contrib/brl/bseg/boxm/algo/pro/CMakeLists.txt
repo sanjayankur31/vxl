@@ -3,13 +3,20 @@
 # bprb depends on expat and bvxm_pro depends on bprb primarily
 FIND_PACKAGE(EXPAT REQUIRED)
 FIND_PACKAGE(EXPATPP REQUIRED)
+
 if(EXPAT_FOUND)
   include_directories( ${BRL_INCLUDE_DIR}/bpro )
   include_directories( ${BRL_INCLUDE_DIR}/bpro/bprb )
   include_directories( ${BRL_INCLUDE_DIR}/bseg )
   include_directories( ${GEL_INCLUDE_DIR}/mrc/vpgl )
   include_directories( ${GEL_INCLUDE_DIR}/mrc )
+
+FIND_PACKAGE(RPLY REQUIRED)
+if(RPLY_FOUND)
+  include_directories( ${RPLY_INCLUDE_DIR} )
+else()
   include_directories( ${VTHREEP_INCLUDE_DIR}/rply )
+endif()
 
   set(boxm_algo_pro_sources
       boxm_algo_processes.h

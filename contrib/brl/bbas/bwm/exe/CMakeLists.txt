@@ -1,7 +1,13 @@
 # This is brl/bbas/bwm/exe/CMakeLists.txt
 # World Modeling GUI executables
 
-include_directories( ${VTHREEP_INCLUDE_DIR}/rply )
+FIND_PACKAGE(RPLY REQUIRED)
+if(RPLY_FOUND)
+  include_directories( ${RPLY_INCLUDE_DIR} )
+else()
+  include_directories( ${VTHREEP_INCLUDE_DIR}/rply )
+endif()
+
 include_directories( ${MUL_INCLUDE_DIR} )
 include_directories( ${OXL_INCLUDE_DIR} )
 

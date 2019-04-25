@@ -4,7 +4,13 @@ if (HAS_GEOTIFF)
 include_directories( ${BRL_INCLUDE_DIR}/bpro )
 include_directories( ${BRL_INCLUDE_DIR}/bpro/bprb )
 include_directories( ${BRL_INCLUDE_DIR}/bbas )
-include_directories( ${VTHREEP_INCLUDE_DIR}/rply )
+
+FIND_PACKAGE(RPLY REQUIRED)
+if(RPLY_FOUND)
+  include_directories( ${RPLY_INCLUDE_DIR} )
+else()
+  include_directories( ${VTHREEP_INCLUDE_DIR}/rply )
+endif()
 
 set(bvrml_pro_sources
     bvrml_processes.h

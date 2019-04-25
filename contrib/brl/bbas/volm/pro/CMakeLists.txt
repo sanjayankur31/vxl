@@ -4,7 +4,13 @@ if(VXL_BUILD_RPL)
 include_directories( ${BRL_INCLUDE_DIR}/bbas )
 include_directories( ${BRL_INCLUDE_DIR}/bpro/core )
 include_directories( ${MUL_INCLUDE_DIR} )
-include_directories( ${VTHREEP_INCLUDE_DIR}/rply)
+
+FIND_PACKAGE(RPLY REQUIRED)
+if(RPLY_FOUND)
+  include_directories( ${RPLY_INCLUDE_DIR} )
+else()
+  include_directories( ${VTHREEP_INCLUDE_DIR}/rply )
+endif()
 
   # The N-dimensional bin structure implementations use rpl/rsdl
 
