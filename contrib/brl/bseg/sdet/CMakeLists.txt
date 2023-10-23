@@ -39,7 +39,6 @@ set(sdet_sources
     sdet_nms.cxx                         sdet_nms.h
     sdet_third_order_edge_det_params.cxx sdet_third_order_edge_det_params.h
     sdet_third_order_edge_det.cxx        sdet_third_order_edge_det.h
-    sdet_image_mesh.cxx                  sdet_image_mesh.h
     sdet_image_mesh_params.cxx           sdet_image_mesh_params.h
     sdet_denoise_mrf.cxx                 sdet_denoise_mrf.h
     sdet_denoise_mrf_params.cxx          sdet_denoise_mrf_params.h

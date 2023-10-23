@@ -16,20 +16,9 @@ set(imesh_algo_sources
    )
 aux_source_directory(Templates imesh_algo_sources)
 
-if(NETLIB_FOUND)
-  include_directories( ${NETLIB_INCLUDE_DIR} )
-  set(imesh_algo_sources ${imesh_algo_sources}
-      imesh_generate_mesh.cxx     imesh_generate_mesh.h)
-endif()
-
 vxl_add_library(LIBRARY_NAME imesh_algo LIBRARY_SOURCES ${imesh_algo_sources} )
 
-if(NETLIB_FOUND)
-
-target_link_libraries( imesh_algo imesh ${VXL_LIB_PREFIX}vpgl bpgl bpgl_algo ${VXL_LIB_PREFIX}vgl_algo ${VXL_LIB_PREFIX}vgl ${VXL_LIB_PREFIX}vnl_algo ${VXL_LIB_PREFIX}vnl ${VXL_LIB_PREFIX}vil netlib)
-else()
 target_link_libraries( imesh_algo imesh ${VXL_LIB_PREFIX}vpgl ${VXL_LIB_PREFIX}vgl_algo ${VXL_LIB_PREFIX}vgl ${VXL_LIB_PREFIX}vnl_algo ${VXL_LIB_PREFIX}vnl ${VXL_LIB_PREFIX}vil )
-endif()
 
 
 if( BUILD_TESTING )
