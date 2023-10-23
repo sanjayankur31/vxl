@@ -2,6 +2,7 @@
 #include <fstream>
 #include <iostream>
 #include <algorithm>
+#include <limits>
 #include <bprb/bprb_func_process.h>
 //:
 // \file

@@ -2,6 +2,7 @@
 #include <iomanip>
 #include <cmath>
 #include <vector>
+#include <limits>
 #include <vgl/vgl_point_3d.h>
 #include <vil/vil_image_view.h>
 

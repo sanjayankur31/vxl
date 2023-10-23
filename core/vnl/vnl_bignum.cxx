@@ -6,6 +6,7 @@
 #include <algorithm>
 #include <vector>
 #include <iostream>
+#include <limits>
 #include "vnl_bignum.h"
 //:
 // \file

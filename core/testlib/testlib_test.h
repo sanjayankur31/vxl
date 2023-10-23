@@ -14,6 +14,7 @@
 
 #include <string>
 #include <complex>
+#include <limits>
 
 //: initialise test counters, check test name 'name' exists
 void testlib_test_start(const char* name = nullptr);

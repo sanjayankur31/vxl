@@ -11,6 +11,7 @@
 #include <vgl/vgl_box_2d.h>
 #include <vil/vil_image_view.h>
 #include <vector>
+#include <limits>
 
 //:
 // \file
