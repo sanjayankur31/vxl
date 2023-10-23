@@ -186,7 +186,8 @@ protected:
 
 
   virtual bool get_epipoles(vgl_homg_point_2d<Type>& e12, vgl_homg_point_2d<Type>& e13)  {
-    if (!epipoles_valid_) compute_epipoles(); e12 = e12_; e13 = e13_; return epipoles_valid_;
+    if (!epipoles_valid_) compute_epipoles();
+    e12 = e12_; e13 = e13_; return epipoles_valid_;
   }
 
   bool compute_epipoles();
