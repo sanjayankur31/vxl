@@ -4,6 +4,7 @@
 #include <algorithm>
 #include <fstream>
 #include <bpgl/acal/acal_metadata.h>
+#include <bpgl/acal/acal_f_utils.h>
 
 std::string bsgm_pair_selector::remove_crop_postfix(std::string const& iname)
 {
