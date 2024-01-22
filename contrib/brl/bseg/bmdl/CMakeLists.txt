@@ -1,5 +1,12 @@
 # This is brl/seg/bmdl/CMakeLists.txt
 
+FIND_PACKAGE( ZLIB QUIET )
+if(ZLIB_FOUND)
+  include_directories( ${ZLIB_INCLUDE_DIR} )
+  include_directories( ${BRL_INCLUDE_DIR}/b3p )
+  add_definitions(-DHAS_ZLIB=1)
+endif()
+
 if(HAS_GEOTIFF)
   include_directories( ${GEOTIFF_INCLUDE_DIR} )
 

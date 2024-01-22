@@ -1,7 +1,7 @@
 # This is contrib/brl/bseg/bmdl/pro/CMakeLists.txt
 # bmdl's Process Library
 
-include( ${VXL_CMAKE_DIR}/FindZLIB.cmake )
+FIND_PACKAGE( ZLIB QUIET )
 if(ZLIB_FOUND)
   include_directories( ${ZLIB_INCLUDE_DIR} )
   include_directories( ${BRL_INCLUDE_DIR}/b3p )
@@ -12,7 +12,7 @@ endif()
 FIND_PACKAGE(EXPAT REQUIRED)
 FIND_PACKAGE(EXPATPP REQUIRED)
 if(EXPAT_FOUND)
-  include(${VXL_CMAKE_DIR}/FindTIFF.cmake)
+  FIND_PACKAGE(TIFF)
   if(TIFF_FOUND)
     include( ${VXL_CMAKE_DIR}/FindGEOTIFF.cmake)
     if(GEOTIFF_FOUND)
