@@ -13,8 +13,6 @@ DECLARE_FUNC_CONS(boxm2_create_cache_process);
 DECLARE_FUNC_CONS(boxm2_create_scene_process);
 DECLARE_FUNC_CONS(boxm2_write_scene_xml_process);
 DECLARE_FUNC_CONS(boxm2_add_block_process);
-DECLARE_FUNC_CONS(boxm2_export_textured_mesh_process);
-DECLARE_FUNC_CONS(boxm2_export_mesh_process);
 DECLARE_FUNC_CONS(boxm2_describe_scene_process);
 DECLARE_FUNC_CONS(boxm2_create_stream_cache_process);
 DECLARE_FUNC_CONS(boxm2_roi_init_process);
@@ -57,7 +55,6 @@ DECLARE_FUNC_CONS(boxm2_label_to_xyz_process);
 DECLARE_FUNC_CONS(boxm2_label_to_xyz_process2);
 DECLARE_FUNC_CONS(boxm2_prune_scene_blocks_process);
 DECLARE_FUNC_CONS(boxm2_prune_scene_blocks_by_dem_process);
-DECLARE_FUNC_CONS(boxm2_load_mesh_process);
 DECLARE_FUNC_CONS(boxm2_create_camera_from_kml_path_process);  // August 23, 2013 Yi Dong
 
 DECLARE_FUNC_CONS(boxm2_ortho_geo_cam_from_scene_process);
