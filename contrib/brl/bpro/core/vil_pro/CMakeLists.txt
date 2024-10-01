@@ -17,7 +17,8 @@ aux_source_directory(processes vil_pro_sources)
 
 vxl_add_library(LIBRARY_NAME vil_pro LIBRARY_SOURCES ${vil_pro_sources})
 
-target_link_libraries(vil_pro bbas_pro bprb bil bil_algo brip sdet ${VXL_LIB_PREFIX}vil_algo ${VXL_LIB_PREFIX}vil_io ${VXL_LIB_PREFIX}vil ${VXL_LIB_PREFIX}vnl ${VXL_LIB_PREFIX}vul ${VXL_LIB_PREFIX}vsl bsta_vis)
+target_link_libraries(vil_pro bbas_pro bprb bil bil_algo brip sdet ${VXL_LIB_PREFIX}vil_algo ${VXL_LIB_PREFIX}vil_io ${VXL_LIB_PREFIX}vil ${VXL_LIB_PREFIX}vnl ${VXL_LIB_PREFIX}vul ${VXL_LIB_PREFIX}vsl bsta_vis vpgl_pro)
+# Need vpgl_pro only for the instantiation of brdb_value_t<vbl_smart_ptr<vpgl_camera<double> > >
 
 if( BUILD_TESTING )
   add_subdirectory(tests)
